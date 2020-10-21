@@ -1,5 +1,7 @@
+// import ressources necessaires//
 const mongoose = require('mongoose');
 
+//mise en place des shema//
 const sauceSchema = mongoose.Schema({
   name: { type: String, required: true },
   manufacturer: { type: String, required: true },

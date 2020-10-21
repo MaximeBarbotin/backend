@@ -1,11 +1,14 @@
+// import ressources necessaires//
 const multer = require('multer');
 
+//formats d'images//
 const MIME_TYPES = {
   'image/jpg': 'jpg',
   'image/jpeg': 'jpg',
   'image/png': 'png'
 };
 
+//stockage d'images//
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
     callback(null, 'images');

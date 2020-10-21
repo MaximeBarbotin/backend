@@ -1,3 +1,4 @@
+// import ressources necessaires//
 const express = require('express');
 const router = express.Router();
 
@@ -6,6 +7,7 @@ const multer = require('../middleware/multer-config');
 
 const saucesCtrl = require('../controllers/sauces');
 
+//creation des routes sauces//
 router.get('/', auth, saucesCtrl.getAllSauces);
 router.post('/', auth, multer, saucesCtrl.createSauce);
 router.get('/:id', auth, saucesCtrl.getOneSauce);

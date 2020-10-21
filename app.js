@@ -1,3 +1,4 @@
+// import ressources necessaires//
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -6,6 +7,7 @@ const path = require ('path');
 const saucesRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 
+//connection a BDD mongo DB//
 mongoose.connect('mongodb+srv://new-user:new-user@cluster1.41vzt.gcp.mongodb.net/test?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
@@ -16,6 +18,7 @@ mongoose.connect('mongodb+srv://new-user:new-user@cluster1.41vzt.gcp.mongodb.net
 
 const app = express();
 
+//headers//
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');

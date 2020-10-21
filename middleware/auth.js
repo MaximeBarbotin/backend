@@ -1,5 +1,7 @@
+// import ressources necessaires//
 const jwt = require('jsonwebtoken');
 
+//verification identite user//
 module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(' ')[1];
