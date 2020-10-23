@@ -3,12 +3,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require ('path');
+require('dotenv').config();
 
 const saucesRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 
 //connection a BDD mongo DB//
-mongoose.connect('mongodb+srv://new-user:new-user@cluster1.41vzt.gcp.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect(process.env.db_conn,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
